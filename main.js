@@ -26,7 +26,7 @@ let students = [
 
 },
 {
-    name: 'tangkwa',
+    name: 'tangkwa rak ter',
     score: 60,
     grade: 'B'
 
@@ -48,5 +48,5 @@ let student = students.find((s) => {
 let hightscore_student = students.filter((s)=> {if (s.score >= 60) {return true}
 })
 
-console.log('student:', student)
+console.log('student:', students) 
 console.log('hightscore_student', hightscore_student)
