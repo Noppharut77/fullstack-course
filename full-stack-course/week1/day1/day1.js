@@ -1,12 +1,21 @@
-// ชนิดข้อมูลพื้นฐาน (Primitive types)
-let myString = "สวัสดี";      // string (ข้อความ)
-let myNumber = 42;             // number (ตัวเลข)
-let myBoolean = true;          // boolean (จริง/เท็จ)
-let myUndefined;               // undefined (ยังไม่มีค่า)
-let myNull = null;             // null (ไม่มีค่า)
+const readline = require("readline");
 
-console.log(typeof myString);
-console.log(typeof myNumber);
-console.log(typeof myBoolean);
-console.log(typeof myUndefined);
-console.log(typeof myNull);
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Put the frist number:", (input1) => {
+    rl.question("Put the second number:", (input2) => {
+        const num1 = Number(input1);
+        const num2 = Number(input2);
+
+        console.log(`ผลบวก: ${num1 + num2}`);
+        console.log(`ผลลบ: ${num1 - num2}`);
+        console.log(`ผลคูณ: ${num1 * num2}`);
+        console.log(`ผลหาร: ${num1 / num2}`);
+
+            rl.close();
+    });
+});
